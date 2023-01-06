@@ -30,30 +30,26 @@ document.querySelector("button#plus").addEventListener("click", function(){
      
 })
 
-let click = 0
+let click = false
 document.querySelector("button#pause").addEventListener("click", function(e){
-    click = click + 1
    
-    if(click === 1){
+    click = !click
+   
+    if(click === true){
        
     clearInterval(interval)}
 
-    else if(click === 2){
-        let interval = setInterval(function(){
+    else {
+        setInterval(function(){
             num = a
             a++
             document.querySelector("h1#counter").innerHTML = a
           
            
         }, 1000)
+        click = true;
+
     }
-    else{
-      
-        clearInterval(interval) 
-        click = click - 1
-        console.log(click)
-    }
-    
 })
 
 
