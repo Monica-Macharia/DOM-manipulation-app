@@ -55,3 +55,28 @@ document.querySelector("button#pause").addEventListener("click", function(e){
     }
     
 })
+
+
+let counter =  0
+document.querySelector("button#heart").addEventListener("click", function(){
+    counter++
+
+
+    let newer = document.createElement("li");
+    let child = document.querySelector("#list.comments").innerText =
+        `${num} has been liked ${counter} time`
+   
+    
+    newer.append(item)
+   
+})
+
+
+document.querySelector("form").addEventListener("submit", function(e){
+    e.preventDefault()
+    let comment = document.querySelector("input#comment-input").value
+
+    document.querySelector("#list.comments").innerText = comment
+    document.querySelector("form").reset()
+   
+})
