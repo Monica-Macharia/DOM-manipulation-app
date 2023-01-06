@@ -63,11 +63,11 @@ document.querySelector("button#heart").addEventListener("click", function(){
 
 
     let newer = document.createElement("li");
-    let child = document.querySelector("#list.comments").innerText =
+    let child = document.querySelector(".likes").innerText =
         `${num} has been liked ${counter} time`
    
     
-    newer.append(item)
+    newer.append(child)
    
 })
 
